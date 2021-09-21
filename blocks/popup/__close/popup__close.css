@@ -1,5 +1,9 @@
 .popup__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    max-width: 40px;
+    min-height: 40px;
+    top: -40px;
+    right: -30px;
+    background: transparent;
+    border: none;
 }
