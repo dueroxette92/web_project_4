@@ -1,0 +1,7 @@
+.photo__galary-lists {
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

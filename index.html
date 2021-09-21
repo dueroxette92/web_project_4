@@ -24,25 +24,45 @@
 <img src='./images/edit.png'></button>
                     <p class="profile__name profile__name_type_des">Explorer</p>
                 </div>
-
-                <button class="profile__add-Button"><img id='add-button'src='./images/Vector.png' alt=""></button>
+                <button class="profile__add-Button"><img id='add-button' src='./images/Vector.png' alt=""></button>
             </section>
 
             <section class="photo-grid">
                 <ul class="photo__gallery">
-                    <li><img class="photo__galary-list" src="./images/YosemitValley.png" alt="Yosemit Valley"></li>
-                    <li><img class="photo__galary-list" src="./images/LakeLouise.png" alt="Lake Louise"></li>
-                    <li><img class="photo__galary-list" src="./images/balMountain.png" alt="bald Mountain"></li>
-                    <li><img class="pphoto__galary-list" src="./images/latemar.png" alt="Latemar"></li>
-                    <li><img class="photo__galary-list" src="./images/vanoise.png" alt="Vanoise National"></li>
-                    <li><img class="photo__galary-list" src="./images/Lagodibraies.png" alt="Lago di Braies"></li>
+                    <li class="photo__galary-lists"><img class="photo__galary-list" src="./images/YosemitValley.png" alt="Yosemit Valley">
+                        <p class="photo__galary-des">Yosemite Valley</p>
+                        <img class="photo__galary-heart" src="./images/heart.svg">
+                    </li>
+                    <li class="photo__galary-lists"><img class=" photo__galary-list " src="./images/LakeLouise.png " alt="Lake Louise ">
+                        <p class="photo__galary-des ">Lake Louise</p>
+                        <img class="photo__galary-heart " src="./images/heart.svg ">
+                    </li>
+                    <li class="photo__galary-lists"><img class="photo__galary-list " src="./images/balMountain.png " alt="bald Mountain ">
+                        <p class="photo__galary-des ">Bald Mountains</p>
+                        <img class="photo__galary-heart " src="./images/heart.svg ">
+                    </li>
+                    <li class="photo__galary-lists"><img class=" pphoto__galary-list " src="./images/latemar.png " alt="Latemar ">
+                        <p class="photo__galary-des ">Latemar</p>
+                        <img class="photo__galary-heart " src="./images/heart.svg ">
+                    </li>
+                    <li class="photo__galary-lists"><img class="photo__galary-list " src="./images/vanoise.png " alt="Vanoise National ">
+                        <p class="photo__galary-des ">Vanoise Nationa...</p>
+                        <img class="photo__galary-heart " src="./images/heart.svg ">
+                    </li>
+                    <li class="photo__galary-lists"><img class=" photo__galary-list " src="./images/Lagodibraies.png " alt="Lago di Braies ">
+                        <p class="photo__galary-des ">Lago di Braies</p>
+                        <img class="photo__galary-heart " src="./images/heart.svg ">
+                    </li>
 
                 </ul>
             </section>
         </main>
-        <div class="popup popup_type_profile">
-            <div class="popup__content">
-                <button type="button" class="popup__close"><img src="./images/Close-Icon.png>"</button>
+        <footer class="footer">
+            <h3 class="footer__copyright">&copy; Around The U.S.</h3>
+        </footer>
+        <div class="popup popup_type_profile ">
+            <div class="popup__content ">
+                <button type="button " class="popup__close "><img src="./images/Close-Icon.png>"</button>
                 <h3 class="popup__title">Edit profile</h3>
                 <form class="popup__form" name="edit-profile" novalidate>
                     <input type="text" id="owner-name" class="popup__input popup__input_type_name" placeholder="Name">
