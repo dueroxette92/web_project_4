@@ -8,21 +8,26 @@ const popupInputName = profilePopup.querySelector('.popup__input_type_name');
 const popupInputFood = profilePopup.querySelector('.popup__input_type_des');
 const popupSaveProfileButton = profilePopup.querySelector('.popup__button');
 
+// Please ignore it here -- Just put it there for later
+// const heart = document.querySelector('.photo__btnheart');
+// const whiteHeart = '\u2661';
+// const blackHeart = '\u2665';
 
-const heart = document.querySelector('.photo__btnheart');
-const whiteHeart = '\u2661';
-const blackHeart = '\u2665';
 
-heart.addEventListener('click', toggle);
+// heart.addEventListener('click', toggle);
 
-function toggle() {
-    const like = heart.textContent;
-    if (like == whiteHeart) {
-        heart.textContent = blackHeart;
-    } else {
-        heart.textContent = whiteHeart;
-    }
-}
+// function toggle() {
+//     const like = heart.textContent;
+//     if (like == whiteHeart) {
+//         heart.textContent = blackHeart;
+//     } else {
+//         heart.textContent = whiteHeart;
+//     }
+// }
+
+// for (let i = 0; i < heart.length; i++) {
+//     heart[i].addEventListener("click", () => toggle(heart[i]));
+// }
 
 function openPopup(popup) {
     popup.classList.add('popup__is-opened');

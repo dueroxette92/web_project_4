@@ -7,6 +7,12 @@
         justify-self: self-end;
     }
     
+    .profile__add-Button:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.6 ease 3s;
+    }
+    
     @media screen and (max-width: 783px) {
         .profile__add-Button {
             position: static;

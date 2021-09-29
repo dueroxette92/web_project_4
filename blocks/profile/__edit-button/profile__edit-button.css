@@ -7,6 +7,12 @@
         align-self: center;
     }
     
+    .profile__edit-button:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.6 ease 3s;
+    }
+    
     @media screen and (max-width: 783px) {
         .profile__edit-button {
             min-width: 18px;
