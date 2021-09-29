@@ -1,0 +1,11 @@
+.photo__gallery-des {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 29.05px;
+    color: #000000;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 246px;
+}
