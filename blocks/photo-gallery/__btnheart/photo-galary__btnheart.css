@@ -1,11 +1,11 @@
-.photo__btnheart {
+.photo-galary__btnheart {
     background: transparent;
     border: none;
     font-size: 21px;
     min-height: 19px;
 }
 
-.photo__btnheart:hover {
+.photo-galary__btnheart:hover {
     cursor: pointer;
     opacity: 0.6;
     transition: 0.6 3s;

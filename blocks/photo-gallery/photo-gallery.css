@@ -1,4 +1,4 @@
-.photo__gallery {
+.photo-gallery {
     list-style-type: none;
     display: grid;
     grid-template-columns: 282px 282px 282px;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 783px) {
-    .photo__gallery {
+    .photo-gallery {
         grid-template-columns: 282px;
         grid-template-rows: repeat(1, 361px);
     }
