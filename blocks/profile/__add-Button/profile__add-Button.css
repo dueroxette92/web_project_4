@@ -1,9 +1,19 @@
-.profile__add-Button {
-    width: 150px;
-    height: 50px;
-    background-color: transparent;
-    border: 1px solid #E5E5E5;
-    align-self: center;
-    position: absolute;
-    right: 25%;
-}
+    .profile__add-Button {
+        width: 150px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid #E5E5E5;
+        align-self: center;
+        justify-self: self-end;
+    }
+    
+    @media screen and (max-width: 783px) {
+        .profile__add-Button {
+            position: static;
+            margin: 36px 0 0 0;
+            min-width: 282px;
+            min-height: 50px;
+            align-self: end;
+            justify-self: center;
+        }
+    }

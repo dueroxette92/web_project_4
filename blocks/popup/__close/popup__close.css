@@ -1,9 +1,14 @@
-.popup__close {
-    position: absolute;
-    max-width: 40px;
-    min-height: 40px;
-    top: -40px;
-    right: -30px;
-    background: transparent;
-    border: none;
-}
+    .popup__close {
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        background: transparent;
+        border: none;
+    }
+    
+    @media screen and (max-width: 783px) {
+        .popup__close {
+            top: -35px;
+            right: -10px;
+        }
+    }

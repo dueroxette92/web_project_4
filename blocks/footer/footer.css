@@ -4,3 +4,12 @@
     max-width: 880px;
     margin: 0 200px;
 }
+
+@media screen and (max-width: 783px) {
+    .footer {
+        width: calc(100% - 19px * 2);
+        margin: 0 19px;
+        padding: 50px 0 36px 0;
+        max-width: 320px;
+    }
+}

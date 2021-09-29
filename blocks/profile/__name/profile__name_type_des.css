@@ -6,3 +6,15 @@
     font-weight: 400;
     max-width: 415px;
 }
+
+@media screen and (max-width: 783px) {
+    .profile__name_type_des {
+        justify-self: center;
+        font-size: 14px;
+        line-height: 16.94px;
+        min-width: 282px;
+        align-self: center;
+        text-align: center;
+        grid-area: profile__name_type_des;
+    }
+}

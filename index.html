@@ -11,7 +11,6 @@
 
 <body class="page">
     <div class="page__container">
-        <div class="overlay"></div>
         <header class="header">
             <img class="header__logo" src="./images/logo.svg" alt="Around the U.S logo">
             <div class="header__line"></div>
@@ -32,29 +31,23 @@
                 <ul class="photo__gallery">
                     <li class="photo__galary-lists"><img class="photo__galary-list" src="./images/YosemitValley.png" alt="Yosemit Valley">
                         <p class="photo__galary-des">Yosemite Valley</p>
-                        <img class="photo__galary-heart" src="./images/heart.svg">
+                        <button class="photo__btnheart" type="button">♡</button>
                     </li>
                     <li class="photo__galary-lists"><img class=" photo__galary-list " src="./images/LakeLouise.png " alt="Lake Louise ">
                         <p class="photo__galary-des ">Lake Louise</p>
-                        <img class="photo__galary-heart " src="./images/heart.svg ">
-                    </li>
+                        <button class="photo__btnheart" type="button">♡</button> </li>
                     <li class="photo__galary-lists"><img class="photo__galary-list " src="./images/balMountain.png " alt="bald Mountain ">
                         <p class="photo__galary-des ">Bald Mountains</p>
-                        <img class="photo__galary-heart " src="./images/heart.svg ">
-                    </li>
+                        <button class="photo__btnheart" type="button">♡</button> </li>
                     <li class="photo__galary-lists"><img class=" pphoto__galary-list " src="./images/latemar.png " alt="Latemar ">
                         <p class="photo__galary-des ">Latemar</p>
-                        <img class="photo__galary-heart " src="./images/heart.svg ">
-                    </li>
+                        <button class="photo__btnheart" type="button">♡</button> </li>
                     <li class="photo__galary-lists"><img class="photo__galary-list " src="./images/vanoise.png " alt="Vanoise National ">
                         <p class="photo__galary-des ">Vanoise Nationa...</p>
-                        <img class="photo__galary-heart " src="./images/heart.svg ">
-                    </li>
+                        <button class="photo__btnheart" type="button">♡</button> </li>
                     <li class="photo__galary-lists"><img class=" photo__galary-list " src="./images/Lagodibraies.png " alt="Lago di Braies ">
                         <p class="photo__galary-des ">Lago di Braies</p>
-                        <img class="photo__galary-heart " src="./images/heart.svg ">
-                    </li>
-
+                        <button class="photo__btnheart" type="button">♡</button> </li>
                 </ul>
             </section>
         </main>
@@ -63,7 +56,7 @@
         </footer>
         <div class="popup popup_type_profile ">
             <div class="popup__content ">
-                <button type="submit " class="popup__close "><img src="./images/Close-Icon.png"></button>
+                <button type="submit " class="popup__close "><img class = "popup__img-closeBtn"src="./images/Close-Icon.png"></button>
                 <h3 class="popup__title">Edit profile</h3>
                 <form class="popup__form" name="edit-profile" novalidate>
                     <input type="text" id="owner-name" class="popup__input popup__input_type_name" placeholder="Name">

@@ -1,9 +1,18 @@
 .profile__info {
     display: grid;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 39px 22px;
-    grid-template-areas: "profile__name profile__editButton";
-    grid-row-gap: 16px;
-    grid-column-gap: 18px;
-    max-width: 415px;
+    grid-template-areas: "profile__name_type_name profile__editButton";
+    grid-gap: 16px 18px;
+}
+
+@media screen and (max-width: 783px) {
+    .profile__info {
+        grid-template-columns: 224px;
+        grid-template-rows: 1fr 1fr;
+        padding: 30px 0 0 0;
+        grid-template-areas: "profile__name_type_name profile__editButton" "profile__name_type_des profile__name_type_des";
+        max-width: 282px;
+        grid-gap: 14px 10px;
+    }
 }
