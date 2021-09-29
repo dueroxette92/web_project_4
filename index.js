@@ -33,8 +33,9 @@ function closePopup(popup) {
     popup.classList.remove('popup__is-opened');
 }
 
+
 profilePopup.addEventListener('click', (evt) => {
-    if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close')) {
+    if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__img-closeBtn')) {
         closePopup(profilePopup);
     }
 });
