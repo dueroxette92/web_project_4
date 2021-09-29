@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
     <link rel="stylesheet" href="styles/index.css">
@@ -17,14 +17,14 @@
         </header>
         <main class="content">
             <section class="profile">
-                <img class="profile__image" src="./images/ProfilePic.png">
+                <img class="profile__image" src="./images/ProfilePic.png" alt="Profile Picture">
                 <div class="profile__info">
                     <h1 class="profile__name profile__name_type_name">Jacques Cousteau</h1>
                     <button class="profile__edit-button">
-<img src='./images/edit.png'></button>
+<img src='./images/edit.png' alt="Edit Button"></button>
                     <p class="profile__name profile__name_type_des">Explorer</p>
                 </div>
-                <button class="profile__add-Button"><img id='add-button' src='./images/Vector.png' alt=""></button>
+                <button class="profile__add-Button"><img id='add-button' src='./images/Vector.png' alt="Add Button"></button>
             </section>
 
             <section class="photo-grid">
@@ -56,7 +56,7 @@
         </footer>
         <div class="popup popup_type_profile ">
             <div class="popup__content ">
-                <button type="submit" class="popup__close "><img class = "popup__img-closeBtn"src="./images/Close-Icon.png"></button>
+                <button type="submit" class="popup__close "><img class = "popup__img-closeBtn" src="./images/Close-Icon.png" alt="Close Icon"></button>
                 <h3 class="popup__title">Edit profile</h3>
                 <form class="popup__form" name="edit-profile" novalidate>
                     <input type="text" id="owner-name" class="popup__input popup__input_type_name" placeholder="Name">
