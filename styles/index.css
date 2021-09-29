@@ -26,9 +26,9 @@
 @import url('../blocks/popup/__button/popup__button.css');
 @import url('../blocks/photo/photo-grid.css');
 @import url('../blocks/photo/__gallery/photo__gallery.css');
-@import url('../blocks/photo/__galary-list/photo__galary-list.css');
-@import url('../blocks/photo/__galary-lists/photo__galary-lists.css');
-@import url('../blocks/photo/__galary-des/photo__galary-des.css');
+@import url('../blocks/photo/__gallery-list/photo__gallery-list.css');
+@import url('../blocks/photo/__gallery-lists/photo__gallery-lists.css');
+@import url('../blocks/photo/__gallery-des/photo__gallery-des.css');
 @import url('../blocks/photo/__btnheart/photo__btnheart.css');
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css')
