@@ -10,6 +10,20 @@
     grid-gap: 30px;
 }
 
+@media screen and (max-width: 1085px) {
+    .profile {
+        max-width: 1020px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .profile {
+        max-width: 800px;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 783px) {
     .profile {
         grid-template-columns: 1fr;

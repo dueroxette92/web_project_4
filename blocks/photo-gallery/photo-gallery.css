@@ -9,9 +9,17 @@
     margin: 0;
 }
 
+@media screen and (max-width: 885px) {
+    .photo-gallery {
+        grid-template-columns: 30% 30% 30%;
+        grid-template-areas: "photo-gallery__lists photo-gallery__lists photo-gallery__lists" "photo-gallery__lists photo-gallery__lists photo-gallery__lists";
+    }
+}
+
 @media screen and (max-width: 783px) {
     .photo-gallery {
         grid-template-columns: 282px;
         grid-template-rows: repeat(1, 361px);
+        grid-template-areas: "photo-gallery__lists" "photo-gallery__lists" "photo-gallery__lists" "photo-gallery__lists" "photo-gallery__lists" "photo-gallery__lists";
     }
 }

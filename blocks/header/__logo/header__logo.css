@@ -4,6 +4,13 @@
     padding: 0;
 }
 
+@media screen and (max-width: 1085) {
+    .header__logo {
+        max-width: 75%;
+        height: 75%;
+    }
+}
+
 @media screen and (max-width: 783px) {
     .header__logo {
         max-width: 126px;

@@ -2,3 +2,16 @@
     max-width: 282px;
     height: 282px;
 }
+
+@media screen and (max-width: 885px) {
+    .photo-gallery__list {
+        height: 282px;
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 783px) {
+    .photo-gallery__list {
+        width: 100%;
+    }
+}

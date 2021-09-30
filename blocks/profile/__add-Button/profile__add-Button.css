@@ -20,6 +20,6 @@
             min-width: 282px;
             min-height: 50px;
             align-self: end;
-            justify-self: center;
+            justify-self: baseline;
         }
     }

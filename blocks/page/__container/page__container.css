@@ -3,6 +3,20 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1085) {
+    .page__container {
+        max-width: 1085px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .page__container {
+        max-width: 885px;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 783px) {
     .page__container {
         max-width: 320px;
