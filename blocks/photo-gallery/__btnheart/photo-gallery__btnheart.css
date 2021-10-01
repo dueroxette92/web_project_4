@@ -7,6 +7,6 @@
 
 .photo-gallery__btnheart:hover {
     cursor: pointer;
-    opacity: 0.6;
-    transition: 0.6 3s;
+    opacity: 0.5;
+    transition: 0.5 3s;
 }

@@ -4,6 +4,7 @@
         font-style: normal;
         font-weight: 400;
         color: #545454;
+        margin: 0;
     }
     
     @media screen and (max-width: 783px) {
@@ -11,7 +12,6 @@
             font-size: 14px;
             line-height: 16.94px;
             max-width: 282px;
-            margin: 0;
             padding: 0;
         }
     }

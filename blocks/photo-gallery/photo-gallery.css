@@ -1,7 +1,7 @@
 .photo-gallery {
     list-style-type: none;
     display: grid;
-    grid-template-columns: 282px 282px 282px;
+    grid-template-columns: repeat(3, 282px);
     grid-template-rows: repeat(2, 361px);
     grid-row-gap: 20px;
     grid-column-gap: 17px;

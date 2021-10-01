@@ -1,73 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Profile</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="page/index.css" />
 </head>
 
 <body class="page">
     <div class="page__container">
         <header class="header">
-            <img class="header__logo" src="./images/logo.svg" alt="Around the U.S logo">
-            <div class="header__line"></div>
+            <img class="header__logo" src="./images/logo.svg" alt="Around the U.S logo" />
         </header>
         <main class="content">
             <section class="profile">
-                <img class="profile__image" src="./images/ProfilePic.png" alt="Profile Picture">
+                <img class="profile__image" src="./images/ProfilePic.png" alt="Profile Picture" />
                 <div class="profile__info">
                     <h1 class="profile__name profile__name_type_name">Jacques Cousteau</h1>
-                    <button class="profile__edit-button">
-<img src='./images/edit.png' alt="Edit Button"></button>
+                    <button class="profile__edit-button" type="button">
+                            <img src="./images/editBtn.svg" alt="Edit Button" />
+                        </button>
+
                     <p class="profile__name profile__name_type_des">Explorer</p>
                 </div>
-                <button class="profile__add-Button"><img id='add-button' src='./images/Vector.png' alt="Add Button"></button>
+                <button class="profile__add-Button" type="button"><img id="add-button" src="./images/AddBtn.svg" alt="Add Button" /></button>
             </section>
 
             <section class="photo-grid">
                 <ul class="photo-gallery">
-                    <li class="photo-gallery__lists"><img class="photo-gallery__list" src="./images/YosemitValley.png" alt="Yosemit Valley">
+                    <li class="photo-gallery__lists">
+                        <img class="photo-gallery__list" src="./images/YosemitValley.png" alt="Yosemit Valley" />
                         <p class="photo-gallery__des">Yosemite Valley</p>
                         <button class="photo-gallery__btnheart" type="button">&#9825;</button>
                     </li>
-                    <li class="photo-gallery__lists"><img class="photo-gallery__list" src="./images/LakeLouise.png " alt="Lake Louise ">
+                    <li class="photo-gallery__lists">
+                        <img class="photo-gallery__list" src="./images/LakeLouise.png " alt="Lake Louise " />
                         <p class="photo-gallery__des">Lake Louise</p>
-                        <button class="photo-gallery__btnheart" type="button">&#9825;</button> </li>
-                    <li class="photo-gallery__lists"><img class="photo-gallery__list " src="./images/balMountain.png " alt="bald Mountain ">
+                        <button class="photo-gallery__btnheart" type="button">&#9825;</button>
+                    </li>
+                    <li class="photo-gallery__lists">
+                        <img class="photo-gallery__list" src="./images/balMountain.png " alt="bald Mountain " />
                         <p class="photo-gallery__des">Bald Mountains</p>
-                        <button class="photo-gallery__btnheart" type="button">&#9825;</button> </li>
-                    <li class="photo-gallery__lists"><img class="photo-gallery__list" src="./images/latemar.png " alt="Latemar ">
+                        <button class="photo-gallery__btnheart" type="button">&#9825;</button>
+                    </li>
+                    <li class="photo-gallery__lists">
+                        <img class="photo-gallery__list" src="./images/latemar.png " alt="Latemar " />
                         <p class="photo-gallery__des">Latemar</p>
-                        <button class="photo-gallery__btnheart" type="button">&#9825;</button> </li>
-                    <li class="photo-gallery__lists"><img class="photo-gallery__list " src="./images/vanoise.png " alt="Vanoise National ">
+                        <button class="photo-gallery__btnheart" type="button">&#9825;</button>
+                    </li>
+                    <li class="photo-gallery__lists">
+                        <img class="photo-gallery__list" src="./images/vanoise.png " alt="Vanoise National " />
                         <p class="photo-gallery__des">Vanoise National Park</p>
-                        <button class="photo-gallery__btnheart" type="button">&#9825;</button> </li>
-                    <li class="photo-gallery__lists"><img class="photo-gallery__list" src="./images/Lagodibraies.png " alt="Lago di Braies ">
-                        <p class="photo-gallery__des ">Lago di Braies</p>
-                        <button class="photo-gallery__btnheart" type="button">&#9825;</button> </li>
+                        <button class="photo-gallery__btnheart" type="button">&#9825;</button>
+                    </li>
+                    <li class="photo-gallery__lists">
+                        <img class="photo-gallery__list" src="./images/Lagodibraies.png " alt="Lago di Braies " />
+                        <p class="photo-gallery__des">Lago di Braies</p>
+                        <button class="photo-gallery__btnheart" type="button">&#9825;</button>
+                    </li>
                 </ul>
             </section>
         </main>
         <footer class="footer">
-            <h3 class="footer__copyright">&copy; Around The U.S.</h3>
+            <p class="footer__copyright">&copy; Around The U.S.</p>
         </footer>
-        <div class="popup popup_type_profile ">
-            <div class="popup__content ">
-                <button type="submit" class="popup__close "><img class = "popup__img-closeBtn" src="./images/Close-Icon.png" alt="Close Icon"></button>
+        <div class="popup popup_type_profile">
+            <div class="popup__content">
+                <button type="submit" class="popup__close"><img class="popup__closeBtn" src="./images/Close-Icon.svg" alt="Close Icon" /></button>
                 <h3 class="popup__title">Edit profile</h3>
                 <form class="popup__form" name="edit-profile" novalidate>
-                    <input type="text" id="owner-name" class="popup__input popup__input_type_name" placeholder="Name">
-                    <input type="text" id="profile-food" class="popup__input popup__input_type_des" placeholder="Profession">
-                    <button type="submit" class="button popup__button">Save</button>
+                    <input type="text" id="owner-name" class="popup__input popup__input_type_name" placeholder="Name" />
+                    <input type="text" id="profile-food" class="popup__input popup__input_type_des" placeholder="Profession" />
+                    <button type="submit" class="popup__button">Save</button>
                 </form>
             </div>
         </div>
     </div>
     <script src="./index.js"></script>
 </body>
-
 
 </html>
