@@ -4,7 +4,7 @@
     margin: 0 200px;
     display: grid;
     grid-template-columns: 120px 415px 1fr;
-    padding: 40px 0 0 0;
+    padding: 0;
     grid-template-rows: 1fr;
     grid-template-areas: "profile__image profile__info profile__add-button";
     grid-gap: 30px;
