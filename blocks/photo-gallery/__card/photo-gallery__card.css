@@ -1,7 +1,6 @@
 .photo-gallery__card {
     max-width: 300px;
     margin: auto;
-    overflow: hidden;
     box-sizing: border-box;
     background: white;
     min-width: 282px;
