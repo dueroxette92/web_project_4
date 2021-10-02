@@ -30,8 +30,9 @@
         /* justify-content: center; */
         align-items: center;
         text-align: center;
-        grid-template-rows: 120px 1fr 50px;
-        grid-template-areas: "profile__image" "profile__info" "profile__add-button";
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "profile__image" "profile__info";
         width: calc(100% - 19px * 2);
+        z-index: 0;
     }
 }
