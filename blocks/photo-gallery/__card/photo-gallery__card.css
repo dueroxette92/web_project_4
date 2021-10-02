@@ -1,0 +1,24 @@
+.photo-gallery__card {
+    max-width: 300px;
+    margin: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: white;
+    min-width: 282px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+}
+
+@media screen and (max-width: 885px) {
+    .photo-gallery__card {
+        min-width: 239px;
+    }
+}
+
+@media screen and (max-width: 783px) {
+    .photo-gallery__card {
+        min-width: 100%;
+    }
+}

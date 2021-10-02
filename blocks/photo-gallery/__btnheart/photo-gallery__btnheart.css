@@ -3,6 +3,7 @@
     border: none;
     font-size: 21px;
     min-height: 19px;
+    padding: 0 15px 0 0;
 }
 
 .photo-gallery__btnheart:hover {

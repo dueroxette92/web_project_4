@@ -1,7 +1,7 @@
 .photo-gallery__lists {
-    background: white;
+    justify-content: space-around;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: flex-end;
 }
