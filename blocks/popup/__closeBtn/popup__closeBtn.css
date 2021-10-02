@@ -1,11 +1,9 @@
     .popup__closeBtn {
         min-width: 40px;
-        min-height: 40px;
     }
     
     @media screen and (max-width: 783px) {
         .popup__closeBtn {
             max-width: 26px;
-            height: 26px;
         }
     }
