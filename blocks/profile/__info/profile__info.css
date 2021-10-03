@@ -1,7 +1,7 @@
 .profile__info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 39px 22px;
+    grid-template-rows: .8fr 22px;
     grid-template-areas: "profile__name_type_name profile__editButton";
     grid-gap: 16px 18px;
     margin: 62px 0 0 0;
