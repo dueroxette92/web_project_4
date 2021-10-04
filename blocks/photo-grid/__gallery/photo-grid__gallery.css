@@ -19,7 +19,7 @@
 @media screen and (max-width: 783px) {
     .photo-grid__gallery {
         grid-template-columns: 282px;
-        grid-template-rows: repeat(1, 361px);
+        grid-template-rows: repeat(6, 361px);
         grid-template-areas: "photo-gallery__lists" "photo-gallery__lists" "photo-gallery__lists" "photo-gallery__lists" "photo-gallery__lists" "photo-gallery__lists";
     }
 }
