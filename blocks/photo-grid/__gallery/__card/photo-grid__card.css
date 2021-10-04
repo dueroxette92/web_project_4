@@ -1,4 +1,4 @@
-.photo-gallery__card {
+.photo-grid__card {
     max-width: 282px;
     box-sizing: border-box;
     width: 100%;
@@ -11,13 +11,13 @@
 }
 
 @media screen and (max-width: 885px) {
-    .photo-gallery__card {
+    .photo-grid__card {
         min-width: 239px;
     }
 }
 
 @media screen and (max-width: 783px) {
-    .photo-gallery__card {
+    .photo-grid__card {
         min-width: 100%;
     }
 }
