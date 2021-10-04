@@ -40,9 +40,8 @@ function closePopup(popup) {
 
 
 profilePopup.addEventListener('click', (evt) => {
-    if (evt.target.classList.contains('popup__closeBtn')) {
-        closePopup(profilePopup);
-    }
+    evt.preventDefault();
+    closePopup(profilePopup);
 });
 
 openEditProfileButton.addEventListener('click', () => {

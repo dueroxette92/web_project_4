@@ -1,13 +1,13 @@
 .photo-gallery__card {
-    max-width: 300px;
-    margin: auto;
+    max-width: 282px;
     box-sizing: border-box;
-    background: white;
-    min-width: 282px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
     border-radius: 0 0 10px 10px;
+    align-items: baseline;
+    padding: 25px 15px 31px 21px;
 }
 
 @media screen and (max-width: 885px) {

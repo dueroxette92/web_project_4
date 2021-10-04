@@ -5,7 +5,6 @@
 
 @media screen and (max-width: 885px) {
     .photo-gallery__list {
-        height: 282px;
         width: 15rem;
     }
 }

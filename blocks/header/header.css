@@ -6,7 +6,7 @@
     width: 100%;
     margin: 0 200px;
     text-align: center;
-    border-bottom: 1px solid #545454;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
 @media screen and (max-width: 1085px) {
@@ -19,14 +19,11 @@
 @media screen and (max-width: 885px) {
     .header {
         max-width: 800px;
-        width: 100%;
     }
 }
 
 @media screen and (max-width: 783px) {
     .header {
-        padding: 0;
         max-width: 320px;
-        margin: 0 auto;
     }
 }
