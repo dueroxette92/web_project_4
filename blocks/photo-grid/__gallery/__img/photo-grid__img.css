@@ -5,12 +5,12 @@
 
 @media screen and (max-width: 885px) {
     .photo-grid__img {
-        width: 15rem;
+        max-width: 15.9rem;
     }
 }
 
 @media screen and (max-width: 783px) {
     .photo-grid__img {
-        width: 100%;
+        max-width: 100%;
     }
 }
