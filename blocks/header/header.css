@@ -4,7 +4,7 @@
     flex-direction: column;
     max-width: 880px;
     width: 100%;
-    margin: 0 200px;
+    margin: 0 auto;
     text-align: center;
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
@@ -12,13 +12,12 @@
 @media screen and (max-width: 1085px) {
     .header {
         max-width: 880px;
-        margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 885px) {
     .header {
-        max-width: 800px;
+        max-width: 785px;
     }
 }
 
