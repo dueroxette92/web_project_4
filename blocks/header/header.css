@@ -9,12 +9,6 @@
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
-@media screen and (max-width: 1085px) {
-    .header {
-        max-width: 880px;
-    }
-}
-
 @media screen and (max-width: 885px) {
     .header {
         max-width: 785px;
