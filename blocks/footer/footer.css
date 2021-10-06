@@ -7,14 +7,15 @@
 @media screen and (max-width: 1085px) {
     .footer {
         max-width: 880px;
-        margin: 68px auto 60px auto;
+        padding: 68px 0 60px 0;
+        margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 885px) {
     .footer {
         max-width: 785px;
-        margin: 68px auto 60px auto;
+        margin: 0 auto;
     }
 }
 
