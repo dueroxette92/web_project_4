@@ -5,12 +5,6 @@
     padding: 50px 0 0 0;
 }
 
-@media screen and (max-width: 1085px) {
-    .photo-grid {
-        max-width: 880px;
-    }
-}
-
 @media screen and (max-width: 885px) {
     .photo-grid {
         max-width: 785px;

@@ -39,8 +39,7 @@ function closePopup(popup) {
 }
 
 
-profilePopup.addEventListener('click', (evt) => {
-    evt.preventDefault();
+closeBtn.addEventListener('click', (evt) => {
     closePopup(profilePopup);
 });
 
