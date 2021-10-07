@@ -6,9 +6,7 @@
         border: 2px solid #FFFFFF;
         box-sizing: border-box;
         border-radius: 2px;
-        position: absolute;
-        top: 50%;
-        right: 0;
+        margin: 75px 0 0 0;
     }
     
     .profile__add-button:hover {
