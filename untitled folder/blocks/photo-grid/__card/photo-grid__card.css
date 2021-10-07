@@ -1,0 +1,23 @@
+.photo-grid__card {
+    max-width: 282px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    align-items: baseline;
+    padding: 25px 15px 31px 21px;
+}
+
+@media screen and (max-width: 885px) {
+    .photo-grid__card {
+        min-width: 239px;
+    }
+}
+
+@media screen and (max-width: 783px) {
+    .photo-grid__card {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+    .popup__closebtn {
+        min-width: 40px;
+    }
+    
+    @media screen and (max-width: 783px) {
+        .popup__closebtn {
+            max-width: 26px;
+        }
+    }

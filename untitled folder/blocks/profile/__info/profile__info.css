@@ -1,0 +1,21 @@
+.profile__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .8fr 22px;
+    grid-template-areas: "profile__name_type_name profile__editButton";
+    grid-gap: 16px 18px;
+    margin: 62px 0 0 0;
+}
+
+@media screen and (max-width: 783px) {
+    .profile__info {
+        grid-template-columns: 196px 18px;
+        grid-template-rows: 1fr;
+        margin: 0;
+        grid-template-areas: "profile__name_type_name profile__editButton" "profile__name_type_des profile__name_type_des";
+        justify-content: center;
+        grid-gap: 14px 10px;
+        padding: 0;
+        z-index: 1;
+    }
+}
