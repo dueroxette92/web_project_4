@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 885px) {
     .photo-grid__gallery {
-        grid-template-columns: 32% 32% 32%;
+        grid-template-columns: repeat(3, 32%);
         grid-template-areas: "photo-gallery__lists photo-gallery__lists photo-gallery__lists" "photo-gallery__lists photo-gallery__lists photo-gallery__lists";
     }
 }
