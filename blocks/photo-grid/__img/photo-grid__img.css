@@ -8,9 +8,3 @@
         max-width: 100%;
     }
 }
-
-@media screen and (max-width: 783px) {
-    .photo-grid__img {
-        max-width: 100%;
-    }
-}
