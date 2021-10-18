@@ -22,11 +22,13 @@
 @import url('../blocks/popup/__input/popup__input.css');
 @import url('../blocks/popup/__button/popup__button.css');
 @import url('../blocks/photo-grid/photo-grid.css');
+@import url('../blocks/photo-grid/__deletebtn/photo-grid__deletebtn.css');
 @import url('../blocks/photo-grid/__gallery/photo-grid__gallery.css');
 @import url('../blocks/photo-grid/__lists/photo-grid__lists.css');
 @import url('../blocks/photo-grid/__img/photo-grid__img.css');
 @import url('../blocks/photo-grid/__card/photo-grid__card.css');
 @import url('../blocks/photo-grid/__des/photo-grid__des.css');
 @import url('../blocks/photo-grid/__btnheart/photo-grid__btnheart.css');
+@import url('../blocks/photo-grid/__btnheart/_active/photo-grid__btnheart_active.css');
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css')

@@ -1,0 +1,9 @@
+.photo-grid__btnheart_active {
+    background-image: url('../../../../images/blackHeart.svg');
+    background-color: transparent;
+    border: none;
+    width: 21px;
+    height: 19px;
+    background-repeat: no-repeat;
+    visibility: visible;
+}

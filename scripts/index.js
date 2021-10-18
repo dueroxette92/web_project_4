@@ -1,33 +1,81 @@
+const initialCards = [{
+        name: "Yosemite Valley",
+        link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
+    },
+    {
+        name: "Lake Louise",
+        link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
+    },
+    {
+        name: "Bald Mountains",
+        link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
+    },
+    {
+        name: "Latemar",
+        link: "https://code.s3.yandex.net/web-code/latemar.jpg"
+    },
+    {
+        name: "Vanoise National Park",
+        link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
+    },
+    {
+        name: "Lago di Braies",
+        link: "https://code.s3.yandex.net/web-code/lago.jpg"
+    }
+];
+
+
 const profileName = document.querySelector('.profile__name_type_name');
-const profileFood = document.querySelector('.profile__name_type_des');
+const profileDes = document.querySelector('.profile__name_type_des');
 const openEditProfileButton = document.querySelector('.profile__edit-button');
-const closeBtn = document.querySelector('.popup__close')
+//const closeBtn = document.querySelector('.popup__close')
 
 const profilePopup = document.querySelector('.popup_type_profile');
 const popupInputName = profilePopup.querySelector('.popup__input_type_name');
-const popupInputFood = profilePopup.querySelector('.popup__input_type_des');
+const popupInputDes = profilePopup.querySelector('.popup__input_type_des');
 const popupSaveProfileButton = profilePopup.querySelector('.popup__button');
 
-// Please ignore it here -- Just put it there for later
-// const heart = document.querySelector('.photo__btnheart');
-// const whiteHeart = '\u2661';
-// const blackHeart = '\u2665';
+//// add Card button //
+const popupCard = document.querySelector('.popup_type_add-card');
+const popupInputPlace = popupCard.querySelector('.popup__input_type_place');
+const popupInputlink = popupCard.querySelector('.popup__input_type_link');
+const addButton = document.querySelector('.profile__add-button');
+const btn = document.querySelector('.button');
+const createBtn = popupCard.querySelector('.popup__btnSubmit');
 
+//add card Template
+const photogridGallery = document.querySelector('.photo-grid__gallery');
+const cardTemplate = document.querySelector('#card-template').content.querySelector('.photo-grid__lists');
+//const deleteBtn = cardTemplate.querySelector('.photo-grid__deletebtn');
+const heartWhite = cardTemplate.querySelector('.photo-grid__btnheart');
+const createCard = document.querySelector('.popup__btnSubmit');
 
-// heart.addEventListener('click', toggle);
+function createCardElement(cardData) { // consist the value name, link
+    const card = cardTemplate.cloneNode(true);
+    card.querySelector('.photo-grid__des').textContent = cardData.name;
+    card.querySelector('.photo-grid__img').style.backgroundImage = `url(${cardData.link})`;
 
-// function toggle() {
-//     const like = heart.textContent;
-//     if (like == whiteHeart) {
-//         heart.textContent = blackHeart;
-//     } else {
-//         heart.textContent = whiteHeart;
-//     }
-// }
+    card.querySelector('.photo-grid__btnheart').addEventListener('click', (event) => {
+        event.target.classList.add('photo-grid__btnheart_active');
+    });
+    card.querySelector('.photo-grid__deletebtn').addEventListener('click', () => {
+        cardTemplate.remove();
+    })
+    return card;
+}
 
-// for (let i = 0; i < heart.length; i++) {
-//     heart[i].addEventListener("click", () => toggle(heart[i]));
-// }
+function addNewCard(event) { // function that add new card
+    event.preventDefault();
+    const cardElement = createCardElement({ name: popupInputPlace.value, link: popupInputlink.value });
+    closePopup(cardTemplate);
+
+    photogridGallery.prepend(cardElement);
+
+    return addNewCard;
+
+}
+createBtn.addEventListener('submit', addNewCard);
+
 
 function openPopup(popup) {
     popup.classList.add('popup_is-opened');
@@ -38,14 +86,9 @@ function closePopup(popup) {
     popup.classList.remove('popup_is-opened');
 }
 
-
-closeBtn.addEventListener('click', (evt) => {
-    closePopup(profilePopup);
-});
-
 openEditProfileButton.addEventListener('click', () => {
     popupInputName.value = profileName.textContent;
-    popupInputFood.value = profileFood.textContent;
+    popupInputDes.value = profileDes.textContent;
     openPopup(profilePopup);
 
 });
@@ -53,6 +96,22 @@ openEditProfileButton.addEventListener('click', () => {
 popupSaveProfileButton.addEventListener('click', (event) => {
     event.preventDefault();
     profileName.textContent = popupInputName.value;
-    profileFood.textContent = popupInputFood.value;
+    profileDes.textContent = popupInputDes.value;
     closePopup(profilePopup);
+});
+
+addButton.addEventListener('click', () =>
+    openPopup(popupCard));
+
+// CODE TO close the CLOSE BUTTON 
+const allCloseButtons = document.querySelectorAll('.popup__close');
+allCloseButtons.forEach(btn => btn.addEventListener('click', () => {
+    const allPopups = document.querySelectorAll('.popup');
+    allPopups.forEach(popup => popup.classList.remove('popup_is-opened'))
+}));
+
+// CARD TEMPLATE CODE //
+
+initialCards.forEach(initialCardData => {
+    photogridGallery.prepend(createCardElement(initialCardData));
 });
