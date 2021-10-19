@@ -58,8 +58,8 @@ function createCardElement(cardData) { // consist the value name, link
     card.querySelector('.photo-grid__btnheart').addEventListener('click', (event) => {
         event.target.classList.add('photo-grid__btnheart_active');
     });
-    card.querySelector('.photo-grid__deletebtn').addEventListener('click', () => {
-        cardTemplate.remove();
+    card.querySelector('.photo-grid__deletebtn').addEventListener('click', (event) => {
+        card.remove();
     })
     return card;
 }
@@ -69,13 +69,12 @@ function addNewCard(event) { // function that add new card
     const cardElement = createCardElement({ name: popupInputPlace.value, link: popupInputlink.value });
 
     photogridGallery.prepend(cardElement);
-    // closePopup(cardTemplate);
+    closePopup(popupCard);
 
-    return addNewCard;
 
 }
 
-createBtn.addEventListener('submit', addNewCard);
+popupCard.addEventListener('submit', addNewCard);
 
 
 
@@ -115,6 +114,6 @@ allCloseButtons.forEach(btn => btn.addEventListener('click', () => {
 
 // CARD TEMPLATE CODE //
 
-initialCards.forEach(initialCardData => {
+initialCards.reverse().forEach(initialCardData => {
     photogridGallery.prepend(createCardElement(initialCardData));
 });
