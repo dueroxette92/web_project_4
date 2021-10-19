@@ -1,9 +1,14 @@
-.popup__image-photo {
-    width: 433px;
-    max-width: 816px;
-    max-height: 540px;
-    background-color: transparent;
-    text-align: center;
-    align-self: center;
-    justify-self: center;
-}
+    .popup__image-photo {
+        max-width: 433px;
+        background-color: transparent;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    @media screen and (max-width: 783px) {
+        .popup__image-photo {
+            max-width: 240px;
+            height: 299px;
+        }
+    }

@@ -1,6 +1,30 @@
 .popup__close-image {
-    right: 29.5%;
+    position: absolute;
+    right: 28%;
     top: auto;
     width: 40px;
     height: 40px;
+}
+
+@media screen and (max-width: 1085px) {
+    .popup__close-image {
+        right: 20%;
+        /* top: auto; */
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .popup__close-image {
+        right: 12%;
+        /* top: auto; */
+    }
+}
+
+@media screen and (max-width: 783px) {
+    .popup__close-image {
+        right: 18%;
+        width: 30px;
+        height: 30px;
+        top: 27%;
+    }
 }

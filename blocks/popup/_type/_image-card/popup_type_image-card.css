@@ -1,0 +1,4 @@
+.popup_type_image-card {
+    transition: visibility 0s, opacity 0.9s;
+    background-color: rgba(0, 0, 0, 0.9);
+}
