@@ -6,6 +6,8 @@
     background-repeat: no-repeat;
     background-color: transparent;
     border: transparent;
+    top: 10px;
+    right: 10px;
 }
 
 .photo-grid__deletebtn:hover {
