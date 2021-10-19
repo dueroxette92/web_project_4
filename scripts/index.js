@@ -40,7 +40,7 @@ const popupCard = document.querySelector('.popup_type_add-card');
 const popupInputPlace = popupCard.querySelector('.popup__input_type_place');
 const popupInputlink = popupCard.querySelector('.popup__input_type_link');
 const addButton = document.querySelector('.profile__add-button');
-const btn = document.querySelector('.button');
+const btn = document.querySelector('.popup__closebtn');
 const createBtn = popupCard.querySelector('.popup__btnSubmit');
 
 //add card Template
@@ -49,6 +49,9 @@ const cardTemplate = document.querySelector('#card-template').content.querySelec
 //const deleteBtn = cardTemplate.querySelector('.photo-grid__deletebtn');
 const heartWhite = cardTemplate.querySelector('.photo-grid__btnheart');
 const createCard = document.querySelector('.popup__btnSubmit');
+const popUpImage = document.querySelector('.popup_type_image-card');
+const PictureInlarge = document.querySelector('.popup__image-photo');
+const pictureDes = document.querySelector('.popup__image-title');
 
 function createCardElement(cardData) { // consist the value name, link
     const card = cardTemplate.cloneNode(true);
@@ -58,9 +61,16 @@ function createCardElement(cardData) { // consist the value name, link
     card.querySelector('.photo-grid__btnheart').addEventListener('click', (event) => {
         event.target.classList.add('photo-grid__btnheart_active');
     });
-    card.querySelector('.photo-grid__deletebtn').addEventListener('click', (event) => {
+    card.querySelector('.photo-grid__deletebtn').addEventListener('click', () => {
         card.remove();
-    })
+    });
+    card.querySelector('.photo-grid__img').addEventListener('click', () => {
+        openPopup(popUpImage);
+        popUpImage.querySelector('.popup__image-title').textContent = cardData.name;
+        popUpImage.querySelector('.popup__image-photo').src = cardData.link;
+
+    });
+
     return card;
 }
 
@@ -109,7 +119,7 @@ addButton.addEventListener('click', () =>
 const allCloseButtons = document.querySelectorAll('.popup__close');
 allCloseButtons.forEach(btn => btn.addEventListener('click', () => {
     const allPopups = document.querySelectorAll('.popup');
-    allPopups.forEach(popup => popup.classList.remove('popup_is-opened'))
+    allPopups.forEach(popup => popup.classList.remove('popup_is-opened'));
 }));
 
 // CARD TEMPLATE CODE //

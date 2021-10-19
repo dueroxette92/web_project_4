@@ -56,10 +56,21 @@
                 </form>
             </div>
         </div>
-    </div>
-    <script src="./scripts/index.js " defer></script>
 
-    <template id="card-template">
+        <div class="popup popup_type_image-card">
+            <div class="popup__img-content">
+                <button type="button" class="button popup__close popup__close-image"><img class="popup__closebtn " src="./images/Close-Icon.svg" alt="Close Icon " /></button>
+                <form class="popup__form " name="add-card" novalidate>
+                    <img class="popup__image-photo" src="#" alt="Card Image">
+                    <p class="popup__image-title"></p>
+                </form>
+            </div>
+
+
+        </div>
+        <script src="./scripts/index.js " defer></script>
+
+        <template id="card-template">
     <li class="photo-grid__lists">
 <button class="photo-grid__deletebtn" type="button"></button>
         <div class="photo-grid__img"></div>
