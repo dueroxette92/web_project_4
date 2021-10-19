@@ -74,12 +74,8 @@ function addNewCard(event) { // function that add new card
 
 }
 
-createBtn.addEventListener('submit', (event) => {
-    event.preventDefault();
-    popupInputPlace.value = cardData.name;
-    popupInputlink.value = `url(${cardData.link})`
+createBtn.addEventListener('submit', addNewCard);
 
-});
 
 
 
