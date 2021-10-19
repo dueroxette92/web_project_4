@@ -67,8 +67,9 @@ function createCardElement(cardData) { // consist the value name, link
 function addNewCard(event) { // function that add new card
     event.preventDefault();
     const cardElement = createCardElement({ name: popupInputPlace.value, link: popupInputlink.value });
-    // closePopup(cardTemplate);
+
     photogridGallery.prepend(cardElement);
+    // closePopup(cardTemplate);
 
     return addNewCard;
 
