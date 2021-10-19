@@ -6,6 +6,10 @@
     background-position: center;
 }
 
+.photo-grid__img:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 885px) {
     .photo-grid__img {
         max-width: 100%;
