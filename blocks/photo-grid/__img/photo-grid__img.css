@@ -1,6 +1,9 @@
 .photo-grid__img {
     max-width: 282px;
     height: 282px;
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+    background-position: center;
 }
 
 @media screen and (max-width: 885px) {

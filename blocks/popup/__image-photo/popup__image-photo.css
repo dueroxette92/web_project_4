@@ -3,4 +3,7 @@
     max-width: 816px;
     max-height: 540px;
     background-color: transparent;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
 }
