@@ -44,14 +44,13 @@ const btn = document.querySelector('.popup__closebtn');
 const createBtn = popupCard.querySelector('.popup__btnSubmit');
 
 //add card Template
-const photogridGallery = document.querySelector('.photo-grid__gallery');
+const photoGridGallery = document.querySelector('.photo-grid__gallery');
 const cardTemplate = document.querySelector('#card-template').content.querySelector('.photo-grid__lists');
 //const deleteBtn = cardTemplate.querySelector('.photo-grid__deletebtn');
 const heartWhite = cardTemplate.querySelector('.photo-grid__btnheart');
 const createCard = document.querySelector('.popup__btnSubmit');
 const popUpImage = document.querySelector('.popup_type_image-card');
-const PictureInlarge = document.querySelector('.popup__image-photo');
-const pictureDes = document.querySelector('.popup__image-title');
+
 
 function createCardElement(cardData) { // consist the value name, link
     const card = cardTemplate.cloneNode(true);
@@ -76,9 +75,12 @@ function createCardElement(cardData) { // consist the value name, link
 
 function addNewCard(event) { // function that add new card
     event.preventDefault();
-    const cardElement = createCardElement({ name: popupInputPlace.value, link: popupInputlink.value });
+    const cardElement = createCardElement({
+        name: popupInputPlace.value,
+        link: popupInputlink.value
+    });
 
-    photogridGallery.prepend(cardElement);
+    photoGridGallery.prepend(cardElement);
     closePopup(popupCard);
 
 
@@ -86,9 +88,7 @@ function addNewCard(event) { // function that add new card
 
 popupCard.addEventListener('submit', addNewCard);
 
-
-
-
+// function to open and close the popUp//
 function openPopup(popup) {
     popup.classList.add('popup_is-opened');
 
@@ -98,32 +98,32 @@ function closePopup(popup) {
     popup.classList.remove('popup_is-opened');
 }
 
-openEditProfileButton.addEventListener('click', () => {
+openEditProfileButton.addEventListener('click', () => { //Codes for EditButton
     popupInputName.value = profileName.textContent;
     popupInputDes.value = profileDes.textContent;
     openPopup(profilePopup);
 
 });
 
-popupSaveProfileButton.addEventListener('click', (event) => {
+popupSaveProfileButton.addEventListener('click', (event) => { //codes for save button
     event.preventDefault();
     profileName.textContent = popupInputName.value;
     profileDes.textContent = popupInputDes.value;
     closePopup(profilePopup);
 });
 
-addButton.addEventListener('click', () =>
+addButton.addEventListener('click', () => // addbutton code
     openPopup(popupCard));
 
 // CODE TO close the CLOSE BUTTON 
-const allCloseButtons = document.querySelectorAll('.popup__close');
-allCloseButtons.forEach(btn => btn.addEventListener('click', () => {
-    const allPopups = document.querySelectorAll('.popup');
-    allPopups.forEach(popup => popup.classList.remove('popup_is-opened'));
+const closeButtonList = document.querySelectorAll('.popup__close');
+closeButtonList.forEach(btn => btn.addEventListener('click', () => {
+    const popup = btn.closest('.popup');
+    closePopup(popup);
 }));
 
 // CARD TEMPLATE CODE //
 
 initialCards.reverse().forEach(initialCardData => {
-    photogridGallery.prepend(createCardElement(initialCardData));
+    photoGridGallery.prepend(createCardElement(initialCardData));
 });
