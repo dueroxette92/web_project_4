@@ -53,11 +53,12 @@ const popUpImage = document.querySelector('.popup_type_image-card');
 
 function createCardElement(cardData) { // consist the value name, link
     const card = cardTemplate.cloneNode(true);
+
     card.querySelector('.photo-grid__des').textContent = cardData.name;
     card.querySelector('.photo-grid__img').style.backgroundImage = `url(${cardData.link})`;
 
-    card.querySelector('.photo-grid__btnheart').addEventListener('click', (event) => {
-        event.target.classList.add('photo-grid__btnheart_active');
+    card.querySelector('.photo-grid__btnheart').addEventListener('click', function(event) {
+        event.target.classList.toggle('photo-grid__btnheart_active');
     });
     card.querySelector('.photo-grid__deletebtn').addEventListener('click', () => {
         card.remove();
