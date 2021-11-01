@@ -46,7 +46,6 @@ const createBtn = popupCard.querySelector('.popup__btnSubmit');
 //add card Template
 const photoGridGallery = document.querySelector('.photo-grid__gallery');
 const cardTemplate = document.querySelector('#card-template').content.querySelector('.photo-grid__lists');
-//const deleteBtn = cardTemplate.querySelector('.photo-grid__deletebtn');
 const heartWhite = cardTemplate.querySelector('.photo-grid__btnheart');
 const createCard = document.querySelector('.popup__btnSubmit');
 const popUpImage = document.querySelector('.popup_type_image-card');
@@ -91,6 +90,9 @@ popupCard.addEventListener('submit', addNewCard);
 // function to open and close the popUp//
 function openPopup(popup) {
     popup.classList.add('popup_is-opened');
+    document.addEventListener('mouseup', closePopupOutside);
+    document.addEventListener('keydown', closePopupEsc);
+
 
 }
 
@@ -109,11 +111,15 @@ popupSaveProfileButton.addEventListener('click', (event) => { //codes for save b
     event.preventDefault();
     profileName.textContent = popupInputName.value;
     profileDes.textContent = popupInputDes.value;
+    checkSubmitButtonValidity(profilePopup.querySelector('form'), pageSettings);
     closePopup(profilePopup);
 });
 
-addButton.addEventListener('click', () => // addbutton code
-    openPopup(popupCard));
+addButton.addEventListener('click', () => { // addbutton code
+    checkSubmitButtonValidity(popupCard.querySelector('form'), pageSettings);
+    openPopup(popupCard);
+
+});
 
 // CODE TO close the CLOSE BUTTON 
 const closeButtonList = document.querySelectorAll('.popup__close');

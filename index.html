@@ -38,8 +38,10 @@
                 <button type="button" class="button popup__close"></button>
                 <h3 class="popup__title">Edit profile</h3>
                 <form class="popup__form " name="edit-profile" novalidate>
-                    <input type="text" id="owner-name" class="popup__input popup__input_type_name" placeholder="Name" />
-                    <input type="text" id="profile-profession" class="popup__input popup__input_type_des" placeholder="Profession" />
+                    <input type="text" id="input_type_name" class="popup__input popup__input_type_name" placeholder="Name" minlength="2" maxlength="40" required/>
+                    <span id="input_type_name-error" class="popup__error"></span>
+                    <input type="text" id="input_type_des" class="popup__input popup__input_type_des" placeholder="Profession" minlength="2" maxlength="200" required/>
+                    <span id="input_type_des-error" class="popup__error"></span>
                     <button type="submit" class="popup__button">Save</button>
                 </form>
             </div>
@@ -50,8 +52,10 @@
                 <button type="button" class="button popup__close"></button>
                 <h3 class="popup__title">New Place</h3>
                 <form class="popup__form " name="add-card" novalidate>
-                    <input type="text" id="name-place" class="popup__input popup__input_type_place" placeholder="Name of The Place" />
-                    <input type="text" id="image-link" class="popup__input popup__input_type_link" placeholder="Image Link" />
+                    <input type="text" id="input_type_place" class="popup__input popup__input_type_place" placeholder="Name of The Place" minlength="2" maxlength="30" required/>
+                    <span id="input_type_place-error" class="popup__error"></span>
+                    <input type="url" id="input_type_link" class="popup__input popup__input_type_link" placeholder="Image Link" required/>
+                    <span id="input_type_link-error" class="popup__error"></span>
                     <button type="submit" class="popup__button">Create</button>
                 </form>
             </div>
@@ -68,6 +72,7 @@
 
 
         </div>
+        <script src="./scripts/validate.js" defer></script>
         <script src="./scripts/index.js " defer></script>
 
         <template id="card-template">

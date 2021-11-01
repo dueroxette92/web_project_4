@@ -24,3 +24,8 @@
         line-height: 16.94px;
     }
 }
+
+.popup__button_disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
