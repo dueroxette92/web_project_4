@@ -76,15 +76,3 @@ function checkSubmitButtonValidity(formElement, settings) {
 }
 
 enableValidation(pageSettings);
-
-function closePopupOutside(event) {
-    if (event.target.classList.contains('popup_is-opened')) {
-        closePopup(event.target);
-    }
-}
-
-function closePopupEsc(event) {
-    if (event.key === "Escape") {
-        [...(document.querySelectorAll('.popup')).forEach((popup) => closePopup(popup))];
-    }
-}

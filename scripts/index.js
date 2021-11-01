@@ -133,3 +133,16 @@ closeButtonList.forEach(btn => btn.addEventListener('click', () => {
 initialCards.reverse().forEach(initialCardData => {
     photoGridGallery.prepend(createCardElement(initialCardData));
 });
+
+
+function closePopupOutside(event) {
+    if (event.target.classList.contains('popup_is-opened')) {
+        closePopup(event.target);
+    }
+}
+
+function closePopupEsc(event) {
+    if (event.key === "Escape") {
+        closePopup([...(document.querySelectorAll('.popup')).forEach((popup) => closePopup(popup))]);
+    }
+}

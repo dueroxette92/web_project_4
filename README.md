@@ -2,7 +2,9 @@
 Project Page: https://dueroxette92.github.io/web_project_4/index.html
 
 ### Overview
-In this project, is quiet really different that the previous project. This time, I am not only linking my css file but also linking my javascript file. 
+In this project, is quiet really different that the previous project. This time, I am not only linking my css file but also linking my javascript file. In Project 6, All inputs that the users will write will be validated. It validate the inputs if it has the required number of characters and show error message everytime the user/s did not acquire the require inputs. The save/create button will be available only when all field has filled and valid. Whenever you press anywhere outside the form, the form will automatically close, same when you pressed the key "escape".
+
+
 * Figma
 * Images
 
