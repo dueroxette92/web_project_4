@@ -143,6 +143,9 @@ function closePopupOutside(event) {
 
 function closePopupEsc(event) {
     if (event.key === "Escape") {
-        closePopup([...(document.querySelectorAll('.popup')).forEach((popup) => closePopup(popup))]);
+        const keyEsc = [...(document.querySelectorAll('.popup'))];
+        keyEsc.forEach((popup) => {
+            closePopup(popup);
+        });
     }
 }
