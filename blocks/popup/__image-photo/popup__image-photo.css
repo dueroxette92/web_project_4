@@ -1,6 +1,7 @@
     .popup__image-photo {
         max-width: 433px;
         background-color: transparent;
+        color: white;
     }
     
     @media screen and (max-width: 783px) {

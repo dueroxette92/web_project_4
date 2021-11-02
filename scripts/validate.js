@@ -50,8 +50,7 @@ function setEventListener(formElement, settings) {
             checkInputValidity(formElement, inputElement, settings);
             toggleButtonState(inputElements, buttonElement, settings);
 
-
-        })
+        });
 
     })
 }
@@ -71,7 +70,6 @@ function checkSubmitButtonValidity(formElement, settings) {
     const inputElements = Array.from(formElement.querySelectorAll(settings.inputSelector));
     const buttonElement = formElement.querySelector(settings.submitButtonSelector);
     toggleButtonState(inputElements, buttonElement, settings);
-
 
 }
 

@@ -8,6 +8,7 @@
     padding: 0;
     margin: 0;
     justify-content: center;
+    color: white;
 }
 
 @media screen and (max-width: 1085px) {
