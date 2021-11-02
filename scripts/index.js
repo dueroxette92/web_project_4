@@ -32,7 +32,7 @@ function createCardElement(cardData) { // consist the value name, link
     card.querySelector('.photo-grid__deletebtn').addEventListener('click', () => {
         card.remove();
     });
-    let imagesCard = card.querySelector('.photo-grid__img');
+    const imagesCard = card.querySelector('.photo-grid__img');
     imagesCard.addEventListener('click', () => {
         openPopup(popUpImage);
         popUpImage.querySelector('.popup__image-title').textContent = cardData.name;
