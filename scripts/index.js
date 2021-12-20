@@ -44,8 +44,6 @@ const popupInputPlace = popupCard.querySelector('.popup__input_type_place');
 const popupInputlink = popupCard.querySelector('.popup__input_type_link');
 const addButton = document.querySelector('.profile__add-button');
 // const createBtn = popupCard.querySelector('.popup__btnSubmit');
-const placesElement = document.querySelector('.photo-grid__lists');
-
 
 //add card Template
 const photoGridGallery = document.querySelector('.photo-grid__gallery');
