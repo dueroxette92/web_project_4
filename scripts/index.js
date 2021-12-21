@@ -79,13 +79,11 @@ popupSaveProfileButton.addEventListener('click', (event) => { //codes for save b
     event.preventDefault();
     profileName.textContent = popupInputName.value;
     profileDes.textContent = popupInputDes.value;
-    profilePopup.querySelector('form'), pageSettings;
     closePopup(profilePopup);
 
 });
 
 addButton.addEventListener('click', () => { // addbutton code
-    popupCard.querySelector('form'), pageSettings;
     openPopup(popupCard);
 
 });
