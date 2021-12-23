@@ -1,6 +1,7 @@
 import FormValidator from "./FormValidator.js";
 import Card from "./card.js";
 import { openPopup, closePopup } from "./utils.js";
+
 const initialCards = [{
         name: "Yosemite Valley",
         link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
@@ -26,9 +27,19 @@ const initialCards = [{
         link: "https://code.s3.yandex.net/web-code/lago.jpg"
     }
 ];
+
+// const formSelector = ".popup__form";
+const pageSettings = {
+    formSelector: ".popup__form",
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__button",
+    inactiveButtonClass: "popup__button_disabled",
+    inputErrorClass: "popup__input_type_error",
+    errorClass: "popup__error_visible"
+}
+
 const profilePopup = document.querySelector('.popup_type_profile');
 const popupCard = document.querySelector('.popup_type_add-card');
-// 
 
 const profileName = document.querySelector('.profile__name_type_name');
 const profileDes = document.querySelector('.profile__name_type_des');
@@ -43,13 +54,25 @@ const popupSaveProfileButton = profilePopup.querySelector('.popup__button');
 const popupInputPlace = popupCard.querySelector('.popup__input_type_place');
 const popupInputlink = popupCard.querySelector('.popup__input_type_link');
 const addButton = document.querySelector('.profile__add-button');
-// const createBtn = popupCard.querySelector('.popup__btnSubmit');
+
+
+// 
+const addFormPopup = popupCard.querySelector('form');
+const profilefromPopup = profilePopup.querySelector('form');
+
+const profileformValidator = new FormValidator(pageSettings, profilefromPopup);
+profileformValidator.enableValidation();
+
+const AddCardformValidator = new FormValidator(pageSettings, addFormPopup);
+AddCardformValidator.enableValidation();
+
 
 //add card Template
 const photoGridGallery = document.querySelector('.photo-grid__gallery');
 // const createCard = document.querySelector('.popup__btnSubmit');
 const cardTemplateSelector = '#card-template';
 
+//--------------------- card -------------------------------------
 function addNewCard(event) { // function that add new card
     event.preventDefault();
     const createCard = new Card({
@@ -62,16 +85,23 @@ function addNewCard(event) { // function that add new card
     popupInputPlace.value = "";
     popupInputlink.value = "";
 
+
 }
 
 popupCard.addEventListener('submit', addNewCard);
 
+addButton.addEventListener('click', () => { // addbutton code
+    openPopup(popupCard)
+    AddCardformValidator.checkSubmitButtonValidity();
 
+});
+
+
+//---------------------- Profile --------------------
 openEditProfileButton.addEventListener('click', () => { //Codes for EditButton
     popupInputName.value = profileName.textContent;
     popupInputDes.value = profileDes.textContent;
     openPopup(profilePopup);
-
 
 });
 
@@ -79,16 +109,11 @@ popupSaveProfileButton.addEventListener('click', (event) => { //codes for save b
     event.preventDefault();
     profileName.textContent = popupInputName.value;
     profileDes.textContent = popupInputDes.value;
-    profilePopup.querySelector('form'), pageSettings;
+    profileformValidator.checkSubmitButtonValidity();
     closePopup(profilePopup);
 
 });
-
-addButton.addEventListener('click', () => { // addbutton code
-    popupCard.querySelector('form'), pageSettings;
-    openPopup(popupCard);
-
-});
+// ----------------------------------------------
 
 
 initialCards.reverse().forEach(initialCardData => {
@@ -96,14 +121,6 @@ initialCards.reverse().forEach(initialCardData => {
     photoGridGallery.prepend(card.render());
 });
 
-const formSelector = ".popup__form";
-const pageSettings = {
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__button",
-    inactiveButtonClass: "popup__button_disabled",
-    inputErrorClass: "popup__input_type_error",
-    errorClass: "popup__error_visible"
-}
 
 const forms = Array.from(document.querySelectorAll(formSelector));
 forms.forEach((formElement) => {
