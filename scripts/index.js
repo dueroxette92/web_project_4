@@ -109,11 +109,22 @@ popupSaveProfileButton.addEventListener('click', (event) => { //codes for save b
     event.preventDefault();
     profileName.textContent = popupInputName.value;
     profileDes.textContent = popupInputDes.value;
+<<<<<<< HEAD
     profileformValidator.checkSubmitButtonValidity();
     closePopup(profilePopup);
 
 });
 // ----------------------------------------------
+=======
+    closePopup(profilePopup);
+
+});
+
+addButton.addEventListener('click', () => { // addbutton code
+    openPopup(popupCard);
+
+});
+>>>>>>> 6b193da0441de56e5d77aaafb7a03459ed309925
 
 
 initialCards.reverse().forEach(initialCardData => {
