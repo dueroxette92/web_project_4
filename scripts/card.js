@@ -11,7 +11,7 @@ export default class Card {
 
     }
 
-    _ImagePreview() {
+    _previewImageHandle() {
         openPopup(popUpImage);
         imageElement.src = this._link;
         imageElement.alt = this._name;
@@ -34,9 +34,7 @@ export default class Card {
 
         likeBtn.addEventListener('click', this._heartEvent);
         deleteBtn.addEventListener('click', this._cardDelete);
-        cardImage.addEventListener('click', this._ImagePreview.bind(this));
-
-
+        cardImage.addEventListener('click', this._previewImageHandle.bind(this));
     }
 
     render() {

@@ -1,5 +1,5 @@
 import FormValidator from "./FormValidator.js";
-import Card from "./card.js";
+import Card from "./Card.js";
 import { openPopup, closePopup } from "./utils.js";
 
 const initialCards = [{
@@ -28,9 +28,8 @@ const initialCards = [{
     }
 ];
 
-// const formSelector = ".popup__form";
+const formSelector = ".popup__form";
 const pageSettings = {
-    formSelector: ".popup__form",
     inputSelector: ".popup__input",
     submitButtonSelector: ".popup__button",
     inactiveButtonClass: "popup__button_disabled",
@@ -56,7 +55,7 @@ const popupInputlink = popupCard.querySelector('.popup__input_type_link');
 const addButton = document.querySelector('.profile__add-button');
 
 
-// 
+
 const addFormPopup = popupCard.querySelector('form');
 const profilefromPopup = profilePopup.querySelector('form');
 
@@ -69,7 +68,6 @@ AddCardformValidator.enableValidation();
 
 //add card Template
 const photoGridGallery = document.querySelector('.photo-grid__gallery');
-// const createCard = document.querySelector('.popup__btnSubmit');
 const cardTemplateSelector = '#card-template';
 
 //--------------------- card -------------------------------------
@@ -84,9 +82,8 @@ function addNewCard(event) { // function that add new card
     closePopup(popupCard);
     popupInputPlace.value = "";
     popupInputlink.value = "";
-
-
 }
+
 
 popupCard.addEventListener('submit', addNewCard);
 
@@ -103,6 +100,7 @@ openEditProfileButton.addEventListener('click', () => { //Codes for EditButton
     popupInputDes.value = profileDes.textContent;
     openPopup(profilePopup);
 
+
 });
 
 popupSaveProfileButton.addEventListener('click', (event) => { //codes for save button
@@ -117,12 +115,4 @@ popupSaveProfileButton.addEventListener('click', (event) => { //codes for save b
 initialCards.reverse().forEach(initialCardData => {
     const card = new Card(initialCardData, cardTemplateSelector);
     photoGridGallery.prepend(card.render());
-});
-
-
-const forms = Array.from(document.querySelectorAll(formSelector));
-forms.forEach((formElement) => {
-    const formValidator = new FormValidator(pageSettings, formElement);
-    formValidator.enableValidation();
-
 });
