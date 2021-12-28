@@ -71,14 +71,20 @@ const photoGridGallery = document.querySelector('.photo-grid__gallery');
 const cardTemplateSelector = '#card-template';
 
 //--------------------- card -------------------------------------
+
+function createCard(data) {
+    const card = new Card(data, cardTemplateSelector);
+    const cardElement = card.render();
+    photoGridGallery.prepend(cardElement);
+
+}
+
 function addNewCard(event) { // function that add new card
     event.preventDefault();
-    const createCard = new Card({
+    createCard({
         name: popupInputPlace.value,
-        link: popupInputlink.value
-    }, cardTemplateSelector);
-
-    photoGridGallery.prepend(createCard.render());
+        link: popupInputlink.value,
+    }, cardTemplateSelector)
     closePopup(popupCard);
     popupInputPlace.value = "";
     popupInputlink.value = "";
@@ -115,4 +121,5 @@ popupSaveProfileButton.addEventListener('click', (event) => { //codes for save b
 initialCards.reverse().forEach(initialCardData => {
     const card = new Card(initialCardData, cardTemplateSelector);
     photoGridGallery.prepend(card.render());
+
 });

@@ -7,8 +7,18 @@ export default class Card {
     constructor(cardData, cardTemplateSelector) {
         this._name = cardData.name;
         this._link = cardData.link;
-        this._template = document.querySelector(cardTemplateSelector).content.querySelector(".photo-grid__lists");
+        this._cardSelector = cardTemplateSelector;
 
+
+    }
+    _getTemplate() {
+        const cardElement = document
+            .querySelector(this._cardSelector)
+            .content
+            .querySelector(".photo-grid__lists")
+            .cloneNode(true);
+
+        return cardElement;
     }
 
     _previewImageHandle() {
@@ -38,9 +48,8 @@ export default class Card {
     }
 
     render() {
-        this._card = this._template.cloneNode(true);
+        this._card = this._getTemplate();
         this._addEventListeners();
-
 
 
         return this._card;
