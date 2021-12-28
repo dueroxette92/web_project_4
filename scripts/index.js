@@ -28,8 +28,8 @@ const initialCards = [{
     }
 ];
 
-const formSelector = ".popup__form";
 const pageSettings = {
+    formSelector: ".popup__form",
     inputSelector: ".popup__input",
     submitButtonSelector: ".popup__button",
     inactiveButtonClass: "popup__button_disabled",
