@@ -119,7 +119,6 @@ popupSaveProfileButton.addEventListener('click', (event) => { //codes for save b
 });
 
 initialCards.reverse().forEach(initialCardData => {
-    const card = new Card(initialCardData, cardTemplateSelector);
-    photoGridGallery.prepend(card.render());
+    createCard(initialCardData);
 
 });
