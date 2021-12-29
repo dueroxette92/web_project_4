@@ -113,7 +113,4 @@ function editFormSubmitHandle(evt) {
 }
 profilePopup.addEventListener("submit", editFormSubmitHandle);
 
-initialCards.reverse().forEach((initialCardsData) => {
-    const card = new Card(initialCardsData, cardTemplateSelector);
-    photoGridGallery.prepend(card.render());
-});
+initialCards.reverse().forEach(renderCard);
