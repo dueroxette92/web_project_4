@@ -69,13 +69,12 @@ const photoGridGallery = document.querySelector('.photo-grid__gallery');
 const cardTemplateSelector = '#card-template';
 
 //--------------------- card -------------------------------------
-
 function createCard(data) {
     const card = new Card(data, cardTemplateSelector);
     photoGridGallery.prepend(card.render());
 }
 
-function addNewCard(event) {
+function addNewCardData(event) {
     event.preventDefault();
     createCard({
         name: popupInputPlace.value,
@@ -90,16 +89,16 @@ function addNewCard(event) {
 
 addButton.addEventListener('click', () => { // addbutton code
     openPopup(popupCard)
-    addCardformValidator.checkSubmitButtonValidity();
+    addCardformValidator.resetValidation();
 
 });
 
-popupCard.addEventListener('submit', addNewCard);
+popupCard.addEventListener('submit', addNewCardData);
 //---------------------- Profile --------------------
 openEditProfileButton.addEventListener('click', () => { //Codes for EditButton
     popupInputName.value = profileName.textContent;
     popupInputDes.value = profileDes.textContent;
-    profileformValidator.checkSubmitButtonValidity();
+    profileformValidator.resetValidation();
     openPopup(profilePopup);
 
 

@@ -1,11 +1,3 @@
-// const pageSettings = {
-//     inputSelector: ".popup__input",
-//     submitButtonSelector: ".popup__button",
-//     inactiveButtonClass: "popup__button_disabled",
-//     inputErrorClass: "popup__input_type_error",
-//     errorClass: "popup__error_visible"
-// }
-
 class FormValidator {
     constructor(settings, formElement) {
         this._inputSelector = settings.inputSelector;
@@ -36,18 +28,18 @@ class FormValidator {
         errorElement.classList.add(this._errorClass);
     }
 
-    _toggleButtonState(inputElements, buttonElement) {
-        const hasInvalidInput = inputElements.some(inputElement => !inputElement.validity.valid);
+    _toggleButtonState() {
+        const hasInvalidInput = this._inputElements.some(inputElement => !inputElement.validity.valid);
         if (hasInvalidInput) {
-            buttonElement.classList.add(this._inactiveButtonClass);
-            buttonElement.disabled = true;
+            this._buttonElement.classList.add(this._inactiveButtonClass);
+            this._buttonElement.disabled = true;
         } else {
-            buttonElement.classList.remove(this._inactiveButtonClass);
-            buttonElement.disabled = false;
+            this._buttonElement.classList.remove(this._inactiveButtonClass);
+            this._buttonElement.disabled = false;
         }
 
     }
-    checkSubmitButtonValidity() {
+    resetValidation() {
         this._toggleButtonState(this._inputElements, this._buttonElement);
         this._inputElements.forEach((inputElement) => {
             this._hideInputError(inputElement)
