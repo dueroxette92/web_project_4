@@ -43,11 +43,9 @@ const popupCard = document.querySelector('.popup_type_add-card');
 const profileName = document.querySelector('.profile__name_type_name');
 const profileDes = document.querySelector('.profile__name_type_des');
 const openEditProfileButton = document.querySelector('.profile__edit-button');
-//const closeBtn = document.querySelector('.popup__close')
 
 const popupInputName = profilePopup.querySelector('.popup__input_type_name');
 const popupInputDes = profilePopup.querySelector('.popup__input_type_des');
-const popupSaveProfileButton = profilePopup.querySelector('.popup__button');
 
 //// add Card button //
 const popupInputPlace = popupCard.querySelector('.popup__input_type_place');
