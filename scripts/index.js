@@ -69,14 +69,15 @@ const photoGridGallery = document.querySelector('.photo-grid__gallery');
 const cardTemplateSelector = '#card-template';
 
 //--------------------- card -------------------------------------
-function createCard(data) {
+const renderCard = (data) => {
     const card = new Card(data, cardTemplateSelector);
     photoGridGallery.prepend(card.render());
+
 }
 
 function addNewCardData(event) {
     event.preventDefault();
-    createCard({
+    renderCard({
         name: popupInputPlace.value,
         link: popupInputlink.value,
     }, cardTemplateSelector)
@@ -112,4 +113,7 @@ function editFormSubmitHandle(evt) {
 }
 profilePopup.addEventListener("submit", editFormSubmitHandle);
 
-initialCards.reverse().forEach(createCard);
+initialCards.reverse().forEach((initialCardsData) => {
+    const card = new Card(initialCardsData, cardTemplateSelector);
+    photoGridGallery.prepend(card.render());
+});
