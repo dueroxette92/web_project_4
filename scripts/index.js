@@ -62,8 +62,8 @@ const profilefromPopup = profilePopup.querySelector('form');
 const profileformValidator = new FormValidator(pageSettings, profilefromPopup);
 profileformValidator.enableValidation();
 
-const AddCardformValidator = new FormValidator(pageSettings, addFormPopup);
-AddCardformValidator.enableValidation();
+const addCardformValidator = new FormValidator(pageSettings, addFormPopup);
+addCardformValidator.enableValidation();
 
 
 //add card Template
@@ -74,12 +74,10 @@ const cardTemplateSelector = '#card-template';
 
 function createCard(data) {
     const card = new Card(data, cardTemplateSelector);
-    const cardElement = card.render();
-    photoGridGallery.prepend(cardElement);
-
+    photoGridGallery.prepend(card.render());
 }
 
-function addNewCard(event) { // function that add new card
+function addNewCard(event) {
     event.preventDefault();
     createCard({
         name: popupInputPlace.value,
@@ -88,37 +86,33 @@ function addNewCard(event) { // function that add new card
     closePopup(popupCard);
     popupInputPlace.value = "";
     popupInputlink.value = "";
+
 }
 
 
-popupCard.addEventListener('submit', addNewCard);
-
 addButton.addEventListener('click', () => { // addbutton code
     openPopup(popupCard)
-    AddCardformValidator.checkSubmitButtonValidity();
+    addCardformValidator.checkSubmitButtonValidity();
 
 });
 
-
+popupCard.addEventListener('submit', addNewCard);
 //---------------------- Profile --------------------
 openEditProfileButton.addEventListener('click', () => { //Codes for EditButton
     popupInputName.value = profileName.textContent;
     popupInputDes.value = profileDes.textContent;
+    profileformValidator.checkSubmitButtonValidity();
     openPopup(profilePopup);
 
 
 });
 
-popupSaveProfileButton.addEventListener('click', (event) => { //codes for save button
-    event.preventDefault();
+function editFormSubmitHandle(evt) {
+    evt.preventDefault();
     profileName.textContent = popupInputName.value;
     profileDes.textContent = popupInputDes.value;
-    profileformValidator.checkSubmitButtonValidity();
     closePopup(profilePopup);
+}
+profilePopup.addEventListener("submit", editFormSubmitHandle);
 
-});
-
-initialCards.reverse().forEach(initialCardData => {
-    createCard(initialCardData);
-
-});
+initialCards.reverse().forEach(createCard);
