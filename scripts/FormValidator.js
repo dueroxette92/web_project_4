@@ -40,7 +40,7 @@ class FormValidator {
 
     }
     resetValidation() {
-        this._toggleButtonState(this._inputElements, this._buttonElement);
+        this._toggleButtonState();
         this._inputElements.forEach((inputElement) => {
             this._hideInputError(inputElement)
         });
@@ -57,7 +57,7 @@ class FormValidator {
         this._inputElements.forEach(inputElement => {
             inputElement.addEventListener('input', () => {
                 this._checkInputValidity(inputElement);
-                this._toggleButtonState(this._inputElements, this._buttonElement);
+                this._toggleButtonState();
 
             });
         });
