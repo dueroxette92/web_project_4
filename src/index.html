@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Profile</title>
-    <link rel="stylesheet" href="pages/index.css" />
 </head>
 
 <body class="page">
     <div class="page__container">
         <header class="header">
-            <img class="header__logo" src="./images/logo.svg" alt="Around the U.S logo">
+            <img class="header__logo" id="headerlogo" alt="Around the U.S logo">
         </header>
         <main class="content">
             <section class="profile">
 
-                <img class="profile__image" src="./images/ProfilePic.png" alt="Profile Picture">
+                <img class="profile__image" alt="Profile Picture">
                 <div class="profile__info">
                     <h1 class="profile__name profile__name_type_name">Jacques Cousteau</h1>
                     <button class="profile__edit-button" type="button"></button>
                     <p class="profile__name profile__name_type_des">Explorer</p>
                 </div>
-                <button class="profile__add-button" type="button"><img id="add-button" src="./images/AddBtn.svg" alt="Add Button" /></button>
+                <button class="profile__add-button" type="button"><img id="add-button"  alt="Add Button" /></button>
             </section>
 
             <section class="photo-grid">
@@ -72,9 +71,6 @@
 
 
         </div>
-
-        <script type="module" src="./scripts/index.js ">
-        </script>
 
         <template id="card-template">
     <li class="photo-grid__lists">

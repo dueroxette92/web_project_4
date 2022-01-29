@@ -1,6 +1,7 @@
-import FormValidator from "./FormValidator.js";
-import Card from "./Card.js";
-import { openPopup, closePopup } from "./utils.js";
+import FormValidator from "../scripts/components/FormValidator";
+import Card from "../scripts/components/Card.js";
+import { openPopup, closePopup } from "../scripts/utils.js";
+import './index.css';
 
 const initialCards = [{
         name: "Yosemite Valley",
@@ -28,6 +29,20 @@ const initialCards = [{
     }
 ];
 
+// images //
+const logoImage = document.querySelector(".header__logo");
+const profilePic = document.querySelector(".profile__image");
+const btnAddbutton = document.querySelector("#add-button");
+
+import logoSrc from "../images/logo.svg";
+logoImage.src = logoSrc;
+
+import profileSrc from "../images/profilePic.png";
+profilePic.src = profileSrc;
+
+import btnAddbuttonSrc from "../images/AddBtn.svg";
+btnAddbutton.src = btnAddbuttonSrc;
+
 const pageSettings = {
     formSelector: ".popup__form",
     inputSelector: ".popup__input",
@@ -36,6 +51,8 @@ const pageSettings = {
     inputErrorClass: "popup__input_type_error",
     errorClass: "popup__error_visible"
 }
+
+
 
 const profilePopup = document.querySelector('.popup_type_profile');
 const popupCard = document.querySelector('.popup_type_add-card');
@@ -74,6 +91,7 @@ const renderCard = (data) => {
     photoGridGallery.prepend(card.render());
 
 }
+
 
 function addNewCardData(event) {
     event.preventDefault();

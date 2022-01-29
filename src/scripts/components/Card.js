@@ -1,4 +1,4 @@
-import { openPopup } from './utils.js';
+import { openPopup } from '../utils';
 
 const popUpImage = document.querySelector('.popup_type_image-card');
 const imageElement = popUpImage.querySelector('.popup__image-photo')
