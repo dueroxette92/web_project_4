@@ -1,14 +1,12 @@
-import { openPopup } from '../utils';
-
-const popUpImage = document.querySelector('.popup_type_image-card');
-const imageElement = popUpImage.querySelector('.popup__image-photo')
-const imageTitle = popUpImage.querySelector('.popup__image-title');
+// const popUpImage = document.querySelector('.popup_type_image-card');
+// const imageElement = popUpImage.querySelector('.popup__image-photo')
+// const imageTitle = popUpImage.querySelector('.popup__image-title');
 export default class Card {
-    constructor(cardData, cardTemplateSelector) {
+    constructor(cardData, cardTemplateSelector, handleCardClick) {
         this._name = cardData.name;
         this._link = cardData.link;
         this._cardSelector = cardTemplateSelector;
-
+        this._handleCardClick = handleCardClick;
 
     }
     _getTemplate() {
@@ -22,10 +20,7 @@ export default class Card {
     }
 
     _previewImage() {
-        openPopup(popUpImage);
-        imageElement.src = this._link;
-        imageElement.alt = this._name;
-        imageTitle.textContent = this._name;
+        this._handleCardClick({ link: this._link, name: this._name });
     }
 
     _heartEvent(evt) {
