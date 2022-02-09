@@ -57,8 +57,6 @@ const popupInputPlace = popupCard.querySelector('.popup__input_type_place');
 const popupInputlink = popupCard.querySelector('.popup__input_type_link');
 const addButton = document.querySelector('.profile__add-button');
 
-const popupImage = document.querySelector('.popup_type_image-card');
-
 const addFormPopup = popupCard.querySelector('form');
 const profilefromPopup = profilePopup.querySelector('form');
 
@@ -106,10 +104,13 @@ const renderCard = (data) => {
 }
 
 const cardSection = new Section({
-    items: initialCards,
-    renderer: renderCard,
-}, cardTemplateSelector)
-cardSection.renderer();
+        items: initialCards,
+        renderer: (element) => {
+            const card = renderCard(element);
+            cardSection.addItem(card);
+        }
+    }, cardTemplateSelector)
+    // cardSection.renderer();
 
 
 const addNewCardData = (data) => {
