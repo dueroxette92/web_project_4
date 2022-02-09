@@ -21,7 +21,7 @@ import {
     profileImg,
     addCardButtonIcon,
 
-} from '../scripts/constants/contants.js'
+} from '../scripts/constants/constants.js'
 
 const popupInputName = profilePopup.querySelector('.popup__input_type_name');
 const popupInputDes = profilePopup.querySelector('.popup__input_type_des');
