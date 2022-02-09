@@ -1,6 +1,3 @@
-// const popUpImage = document.querySelector('.popup_type_image-card');
-// const imageElement = popUpImage.querySelector('.popup__image-photo')
-// const imageTitle = popUpImage.querySelector('.popup__image-title');
 export default class Card {
     constructor(cardData, cardTemplateSelector, handleCardClick) {
         this._name = cardData.name;
@@ -23,10 +20,10 @@ export default class Card {
         this._handleCardClick({ link: this._link, name: this._name });
     }
 
-    _heartEvent(evt) {
+    _handleLike(evt) {
         evt.target.classList.toggle('photo-grid__btnheart_active');
     }
-    _cardDelete(evt) {
+    _handleDelete(evt) {
         evt.target.closest('.photo-grid__lists').remove();
     }
     _addEventListeners() {
@@ -38,8 +35,8 @@ export default class Card {
         cardImage.src = this._link;
         cardImage.alt = this._name;
 
-        likeBtn.addEventListener('click', this._heartEvent);
-        deleteBtn.addEventListener('click', this._cardDelete);
+        likeBtn.addEventListener('click', this._handleLike);
+        deleteBtn.addEventListener('click', this._handleDelete);
         cardImage.addEventListener('click', this._previewImage.bind(this));
     }
 

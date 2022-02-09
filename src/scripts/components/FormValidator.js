@@ -53,7 +53,7 @@ class FormValidator {
             this._showInputError(inputElement, inputElement.validationMessage);
         }
     }
-    _setEventListener() {
+    _setEventListeners() {
         this._inputElements.forEach(inputElement => {
             inputElement.addEventListener('input', () => {
                 this._checkInputValidity(inputElement);
@@ -69,7 +69,7 @@ class FormValidator {
         this._formElement.addEventListener('submit', e => {
             e.preventDefault();
         });
-        this._setEventListener();
+        this._setEventListeners();
 
     }
 }

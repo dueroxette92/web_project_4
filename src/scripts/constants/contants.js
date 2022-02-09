@@ -40,17 +40,14 @@ const profileName = document.querySelector('.profile__name_type_name');
 const profileDes = document.querySelector('.profile__name_type_des');
 const openEditProfileButton = document.querySelector('.profile__edit-button');
 
-const popupInputName = profilePopup.querySelector('.popup__input_type_name');
-const popupInputDes = profilePopup.querySelector('.popup__input_type_des');
-const addButton = document.querySelector('.profile__add-button');
 //// add Card button //
 const popupInputPlace = popupCard.querySelector('.popup__input_type_place');
 const popupInputlink = popupCard.querySelector('.popup__input_type_link');
 
 //----images ----
 const logoImage = document.querySelector(".header__logo");
-const profilePic = document.querySelector(".profile__image");
-const btnAddbutton = document.querySelector("#add-button");
+const profileImg = document.querySelector(".profile__image");
+const addCardButtonIcon = document.querySelector("#add-button");
 
 
 //add card Template
@@ -65,14 +62,13 @@ export {
     profileName,
     profileDes,
     openEditProfileButton,
-    popupInputName,
     popupInputDes,
     popupInputPlace,
     popupInputlink,
     photoGridGallery,
     cardTemplateSelector,
     logoImage,
-    profilePic,
-    btnAddbutton,
+    profileImg,
+    addCardButtonIcon,
     addButton
 }

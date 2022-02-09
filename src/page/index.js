@@ -1,6 +1,5 @@
 import FormValidator from "../scripts/components/FormValidator.js";
 import Card from "../scripts/components/Card.js";
-// import { openPopup, closePopup } from "./utils.js";
 import Section from "../scripts/components/Section.js";
 import PopupWithImage from "../scripts/components/PopupWithImage.js";
 import PopupWithForms from "../scripts/components/PopupWithForms.js";
@@ -14,39 +13,41 @@ import {
     profileName,
     profileDes,
     openEditProfileButton,
-    popupInputName,
-    popupInputDes,
     popupInputPlace,
     popupInputlink,
     photoGridGallery,
     cardTemplateSelector,
     logoImage,
-    profilePic,
-    btnAddbutton,
-    addButton
+    profileImg,
+    addCardButtonIcon,
+
 } from '../scripts/constants/contants.js'
+
+const popupInputName = profilePopup.querySelector('.popup__input_type_name');
+const popupInputDes = profilePopup.querySelector('.popup__input_type_des');
+const addButton = document.querySelector('.profile__add-button');
 
 const addFormPopup = popupCard.querySelector('form');
 const profilefromPopup = profilePopup.querySelector('form');
 
-const profileformValidator = new FormValidator(pageSettings, profilefromPopup);
-profileformValidator.enableValidation();
+const profileValidator = new FormValidator(pageSettings, profilefromPopup);
+profileValidator.enableValidation();
 
-const addCardformValidator = new FormValidator(pageSettings, addFormPopup);
-addCardformValidator.enableValidation();
+const cardValidator = new FormValidator(pageSettings, addFormPopup);
+cardValidator.enableValidation();
 
 import logoSrc from "../images/logo.svg";
 logoImage.src = logoSrc;
 
 import profileSrc from "../images/profilePic.png";
-profilePic.src = profileSrc;
+profileImg.src = profileSrc;
 
 import btnAddbuttonSrc from "../images/AddBtn.svg";
-btnAddbutton.src = btnAddbuttonSrc;
+addCardButtonIcon.src = btnAddbuttonSrc;
 
-//------ ImagePopUp ----//
-const ImagePopUp = new PopupWithImage('.popup_type_image-card');
-ImagePopUp.setEventListeners();
+//------ imagePopUp ----//
+const imagePopUp = new PopupWithImage('.popup_type_image-card');
+imagePopUp.setEventListeners();
 
 const editProfilePopupForm = new PopupWithForms('.popup_type_profile', submitProfileForm);
 editProfilePopupForm.setEventListeners();
@@ -58,14 +59,14 @@ const userInfo = new UserInfo({ profileName: profileName, profileDes: profileDes
 
 //--------------------- Cards -------------------------------------
 const renderCard = (data) => {
-    const card = new Card(data, cardTemplateSelector, ImagePopUp.open);
+    const card = new Card(data, cardTemplateSelector, imagePopUp.open);
     photoGridGallery.prepend(card.render());
 
 }
 
 const cardSection = new Section({
         items: initialCards,
-        renderer: (element) => {
+        renderer: () => {
             const card = renderCard(element);
             cardSection.addItem(card);
         }
@@ -75,15 +76,15 @@ const cardSection = new Section({
 
 const addNewCardData = (data) => {
     data.preventDefault();
-    const insertNewCard = renderCard({ name: popupInputPlace.value, link: popupInputlink.value });
-    cardSection.addItem(insertNewCard);
+    renderCard({ name: popupInputPlace.value, link: popupInputlink.value });
+    cardSection.addItem(data);
     addCardForm.close();
 
 }
 
 addButton.addEventListener('click', () => { // addbutton code
     addCardForm.open();
-    addCardformValidator.resetValidation();
+    cardValidator.resetValidation();
 
 });
 
@@ -94,14 +95,14 @@ openEditProfileButton.addEventListener('click', () => { //Codes for EditButton
     const userData = userInfo.getUserInfo();
     popupInputName.value = userData.name;
     popupInputDes.value = userData.description;
-    profileformValidator.resetValidation();
+    profileValidator.resetValidation();
 });
 
 
 function submitProfileForm(e) {
     e.preventDefault();
 
-    userInfo.setUserInfo({ inputName: popupInputName.value, InputDes: popupInputDes.value });
+    userInfo.setUserInfo({ inputName: popupInputName.value, inputDescription: popupInputDes.value });
     editProfilePopupForm.close();
 
 }

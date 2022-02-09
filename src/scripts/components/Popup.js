@@ -3,7 +3,7 @@ export default class Popup {
         this._popup = document.querySelector(popupSelector)
     }
     setEventListeners() {
-        this._popup.addEventListener("click", (event) => {
+        this._popup.addEventListener("mousedown", (event) => {
             if (event.target.classList.contains('popup') || event.target.classList.contains('popup__close')) {
                 this.close();
             }

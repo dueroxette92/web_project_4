@@ -9,8 +9,8 @@ export default class UserInfo {
         const userInfo = { name: this._profileName.textContent, description: this._profileDes.textContent }
         return userInfo;
     }
-    setUserInfo({ inputName, InputDes }) {
+    setUserInfo({ inputName, inputDescription }) {
         this._profileName.textContent = inputName;
-        this._profileDes.textContent = InputDes;
+        this._profileDes.textContent = inputDescription;
     }
 }
