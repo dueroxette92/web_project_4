@@ -81,8 +81,8 @@ addCardForm.setEventListeners();
 const userInfo = new UserInfo({ profileName: profileName, profileDes: profileDes });
 //add card Template
 const photoGridGallery = document.querySelector('.photo-grid__gallery');
-const cardTemplateSelector = '#card-template';
-
+const cardTemplateSelector = "#card-template";
+// const cardTemplateSelector = "#card-template";
 // --------- images/logos ------
 const logoImage = document.querySelector(".header__logo");
 const profilePic = document.querySelector(".profile__image");
