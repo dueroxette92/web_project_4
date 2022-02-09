@@ -50,7 +50,7 @@ module.exports = {
             {
                 // add the rule for processing files
                 test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
-                type: "asset/resource"
+                type: "asset/resource",
             },
         ]
     },
