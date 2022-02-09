@@ -6,55 +6,26 @@ import PopupWithImage from "../scripts/components/PopupWithImage.js";
 import PopupWithForms from "../scripts/components/PopupWithForms.js";
 import UserInfo from "../scripts/components/UserInfo.js";
 import "../page/index.css"
+import {
+    initialCards,
+    pageSettings,
+    profilePopup,
+    popupCard,
+    profileName,
+    profileDes,
+    openEditProfileButton,
+    popupInputName,
+    popupInputDes,
+    popupInputPlace,
+    popupInputlink,
+    photoGridGallery,
+    cardTemplateSelector
+} from '../scripts/constants/contants.js'
 
-const initialCards = [{
-        name: "Yosemite Valley",
-        link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
-    },
-    {
-        name: "Lake Louise",
-        link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
-    },
-    {
-        name: "Bald Mountains",
-        link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
-    },
-    {
-        name: "Latemar",
-        link: "https://code.s3.yandex.net/web-code/latemar.jpg"
-    },
-    {
-        name: "Vanoise National Park",
-        link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
-    },
-    {
-        name: "Lago di Braies",
-        link: "https://code.s3.yandex.net/web-code/lago.jpg"
-    }
-];
+const logoImage = document.querySelector(".header__logo");
+const profilePic = document.querySelector(".profile__image");
+const btnAddbutton = document.querySelector("#add-button");
 
-const pageSettings = {
-    formSelector: ".popup__form",
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__button",
-    inactiveButtonClass: "popup__button_disabled",
-    inputErrorClass: "popup__input_type_error",
-    errorClass: "popup__error_visible"
-}
-
-const profilePopup = document.querySelector('.popup_type_profile');
-const popupCard = document.querySelector('.popup_type_add-card');
-
-const profileName = document.querySelector('.profile__name_type_name');
-const profileDes = document.querySelector('.profile__name_type_des');
-const openEditProfileButton = document.querySelector('.profile__edit-button');
-
-const popupInputName = profilePopup.querySelector('.popup__input_type_name');
-const popupInputDes = profilePopup.querySelector('.popup__input_type_des');
-
-//// add Card button //
-const popupInputPlace = popupCard.querySelector('.popup__input_type_place');
-const popupInputlink = popupCard.querySelector('.popup__input_type_link');
 const addButton = document.querySelector('.profile__add-button');
 
 const addFormPopup = popupCard.querySelector('form');
@@ -65,6 +36,15 @@ profileformValidator.enableValidation();
 
 const addCardformValidator = new FormValidator(pageSettings, addFormPopup);
 addCardformValidator.enableValidation();
+
+import logoSrc from "../images/logo.svg";
+logoImage.src = logoSrc;
+
+import profileSrc from "../images/profilePic.png";
+profilePic.src = profileSrc;
+
+import btnAddbuttonSrc from "../images/AddBtn.svg";
+btnAddbutton.src = btnAddbuttonSrc;
 
 //------ ImagePopUp ----//
 const ImagePopUp = new PopupWithImage('.popup_type_image-card');
@@ -77,24 +57,6 @@ const addCardForm = new PopupWithForms('.popup_type_add-card');
 addCardForm.setEventListeners();
 
 const userInfo = new UserInfo({ profileName: profileName, profileDes: profileDes });
-//add card Template
-const photoGridGallery = document.querySelector('.photo-grid__gallery');
-const cardTemplateSelector = "#card-template";
-// const cardTemplateSelector = "#card-template";
-// --------- images/logos ------
-const logoImage = document.querySelector(".header__logo");
-const profilePic = document.querySelector(".profile__image");
-const btnAddbutton = document.querySelector("#add-button");
-
-import logoSrc from "../images/logo.svg";
-logoImage.src = logoSrc;
-
-import profileSrc from "../images/profilePic.png";
-profilePic.src = profileSrc;
-
-import btnAddbuttonSrc from "../images/AddBtn.svg";
-btnAddbutton.src = btnAddbuttonSrc;
-
 
 //--------------------- Cards -------------------------------------
 const renderCard = (data) => {
