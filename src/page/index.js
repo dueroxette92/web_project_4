@@ -19,14 +19,12 @@ import {
     popupInputPlace,
     popupInputlink,
     photoGridGallery,
-    cardTemplateSelector
+    cardTemplateSelector,
+    logoImage,
+    profilePic,
+    btnAddbutton,
+    addButton
 } from '../scripts/constants/contants.js'
-
-const logoImage = document.querySelector(".header__logo");
-const profilePic = document.querySelector(".profile__image");
-const btnAddbutton = document.querySelector("#add-button");
-
-const addButton = document.querySelector('.profile__add-button');
 
 const addFormPopup = popupCard.querySelector('form');
 const profilefromPopup = profilePopup.querySelector('form');
