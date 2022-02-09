@@ -35,8 +35,8 @@ export default class Card {
         const deleteBtn = this._card.querySelector('.photo-grid__deletebtn');
 
         this._card.querySelector('.photo-grid__des').textContent = this._name;
-        this._card.querySelector('.photo-grid__img').src = this._link;
-        this._card.querySelector('.photo-grid__img').alt = this._name;
+        cardImage.src = this._link;
+        cardImage.alt = this._name;
 
         likeBtn.addEventListener('click', this._heartEvent);
         deleteBtn.addEventListener('click', this._cardDelete);
