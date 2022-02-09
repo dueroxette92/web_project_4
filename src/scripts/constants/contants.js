@@ -62,13 +62,12 @@ export {
     profileName,
     profileDes,
     openEditProfileButton,
-    popupInputDes,
     popupInputPlace,
     popupInputlink,
     photoGridGallery,
     cardTemplateSelector,
     logoImage,
     profileImg,
-    addCardButtonIcon,
-    addButton
+    addCardButtonIcon
+
 }
